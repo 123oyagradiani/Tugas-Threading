@@ -2,7 +2,7 @@ import threading
 import time
 
 saldo = 100
-print_lock = threading.Lock()  # tambahan lock untuk print
+print_lock = threading.Lock() 
 
 def tarik_uang(nama, jumlah):
     global saldo
@@ -28,3 +28,4 @@ t2.join()
 
 with print_lock:
     print(f"\nSaldo akhir: {saldo}")
+
